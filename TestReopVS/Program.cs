@@ -10,7 +10,7 @@ namespace TestReopVS
     {
         static void Main(string[] args)
         {
-            Console.Write("hello world");
+            Console.Write("hello GIT world");
         }
     }
 }
