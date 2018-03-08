@@ -10,7 +10,7 @@ namespace TestReopVS
     {
         static void Main(string[] args)
         {
-            Console.Write(value: "Enter palindrome");
+            Console.Write(value: "Enter palindrome:  ");
             var input = Console.ReadLine();
             Console.WriteLine("{0} is typeof {1}", input, input.GetType());
             string reverse = Reverse(input);
@@ -21,6 +21,20 @@ namespace TestReopVS
             {
                 Console.WriteLine("nope not a palindrome {0}.NotEquals({1})",input,reverse);
             }
+
+            // another way
+            var rev = input.Reverse<char>();
+
+            Console.WriteLine("REVERSED");
+            bool ans = true;
+            int i = 0;
+            foreach(char c in rev)
+            {
+               if(input[i] != c)
+                {ans = false;}
+                i++;
+            }
+            Console.WriteLine("New way ans is {0}",ans);
         }
 
         public static string Reverse(string s)
